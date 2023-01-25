@@ -4,13 +4,13 @@ services:
     frontend:
         depends_on:
           - backend
-        image: reddit-spring-frontend
+        image: topics-explorer-frontend
         ports:
           - "3000:80"
     backend:
         depends_on:
           - appdatabase
-        image: reddit-spring-backend
+        image: topics-explorer-backend
         ports:
           - "8080:8080"
     appdatabase:

@@ -4,7 +4,7 @@ services:
     frontend:
         depends_on:
           - backend
-        image: reddit-spring-frontend-dev
+        image: topics-explorer-frontend-dev
         ports:
           - "3000:3000"
         volumes:
@@ -12,7 +12,7 @@ services:
     backend:
         depends_on:
           - appdatabase
-        image: reddit-spring-backend-dev
+        image: topics-explorer-backend-dev
         ports:
           - "8080:8080"
         volumes:
@@ -24,3 +24,8 @@ services:
           - POSTGRES_DB=topicsexplorer
         volumes:
           - ../database/postgresql-data:/var/lib/postgresql/data
+    mailserver:
+      image: maildev/maildev
+      ports:
+        - "1080:1080"
+        - "1025:1025"

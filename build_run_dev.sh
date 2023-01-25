@@ -1,10 +1,10 @@
 #!/bin/bash
 
 cd topics-explorer-frontend
-sudo docker build -f Dockerfile.dev -t reddit-spring-frontend-dev .
+sudo docker build -f Dockerfile.dev -t topics-explorer-frontend-dev .
 cd ..
 cd topics-explorer-backend
-sudo docker build -f Dockerfile.dev -t reddit-spring-backend-dev .
+sudo docker build -f Dockerfile.dev -t topics-explorer-backend-dev .
 cd ..
 cd dev-compose
 sudo docker-compose up
