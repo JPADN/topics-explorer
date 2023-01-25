@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="topics explorer logo" src="./redditspring-frontend/src/assets/logo-topics-explorer.png">
+  <img alt="topics explorer logo" src="./logo-topics-explorer.png">
 </div>
 
 
