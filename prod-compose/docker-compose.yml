@@ -1,0 +1,22 @@
+version : '3'
+
+services:
+    frontend:
+        depends_on:
+          - backend
+        image: reddit-spring-frontend
+        ports:
+          - "3000:80"
+    backend:
+        depends_on:
+          - appdatabase
+        image: reddit-spring-backend
+        ports:
+          - "8080:8080"
+    appdatabase:
+        image: postgres
+        environment:
+          - POSTGRES_PASSWORD=teste
+          - POSTGRES_DB=topicsexplorer
+        volumes:
+          - ../database/postgresql-data:/var/lib/postgresql/data
