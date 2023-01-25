@@ -8,7 +8,7 @@ services:
         ports:
           - "3000:3000"
         volumes:
-          - ../redditspring-frontend:/app
+          - ../topics-explorer-frontend:/app
     backend:
         depends_on:
           - appdatabase
@@ -16,7 +16,7 @@ services:
         ports:
           - "8080:8080"
         volumes:
-          - ../redditspring-backend:/backend
+          - ../topics-explorer-backend:/backend
     appdatabase:
         image: postgres
         environment:

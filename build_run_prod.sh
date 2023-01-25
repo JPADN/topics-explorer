@@ -1,8 +1,8 @@
 #!/bin/bash
-cd redditspring-frontend
+cd topics-explorer-frontend
 sudo docker build . -t reddit-spring-frontend
 cd ..
-cd redditspring-backend
+cd topics-explorer-backend
 ./mvnw clean package -Dmaven.test.skip
 sudo docker build . -t reddit-spring-backend
 cd ..

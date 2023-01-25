@@ -1,9 +1,9 @@
 #!/bin/bash
 
-cd redditspring-frontend
+cd topics-explorer-frontend
 sudo docker build -f Dockerfile.dev -t reddit-spring-frontend-dev .
 cd ..
-cd redditspring-backend
+cd topics-explorer-backend
 sudo docker build -f Dockerfile.dev -t reddit-spring-backend-dev .
 cd ..
 cd dev-compose
