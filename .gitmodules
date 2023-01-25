@@ -1,0 +1,6 @@
+[submodule "topics-explorer-backend"]
+	path = topics-explorer-backend
+	url = git@github.com:JPADN/topics-explorer-backend.git
+[submodule "topics-explorer-frontend"]
+	path = topics-explorer-frontend
+	url = git@github.com:JPADN/topics-explorer-frontend.git
