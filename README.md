@@ -32,3 +32,5 @@ Para compilar as imagens Docker e subir os contâineres em um SO Linux com bash,
 ```
 ./build_run_prod.sh
 ```
+
+Para acessar a aplicação vá ao endereço `http://localhost:3000` em seu browser.
