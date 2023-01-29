@@ -13,10 +13,11 @@ services:
         image: topics-explorer-backend
         ports:
           - "8080:8080"
+          - "443:443"
     appdatabase:
         image: postgres
         environment:
-          - POSTGRES_PASSWORD=teste
+          - POSTGRES_PASSWORD=${DBPASSWORD}
           - POSTGRES_DB=topicsexplorer
         volumes:
           - ../database/postgresql-data:/var/lib/postgresql/data
