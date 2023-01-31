@@ -15,11 +15,11 @@ services:
           - "8080:8080"
           - "8443:8443"
         environment:
-          - KEYSTORE_PASSWD=$${KEYSTORE_PASSWD}
+          - KEYSTOREPASSWD=$KEYSTOREPASSWD_HOST
     appdatabase:
         image: postgres
         environment:
-          - POSTGRES_PASSWORD=$${DB_PASSWORD}
+          - POSTGRES_PASSWORD=$DB_PASSWORD
           - POSTGRES_DB=topicsexplorer
         volumes:
           - ../database/postgresql-data:/var/lib/postgresql/data

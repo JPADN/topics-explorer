@@ -6,10 +6,9 @@ services:
           - backend
         image: topics-explorer-frontend-dev
         ports:
-          - "3000:3000"
-          - "443:443"
+          - "3000:3000"          
         volumes:
-          - ../topics-explorer-frontend:/app
+          - ../topics-explorer-frontend:/app        
     backend:
         depends_on:
           - appdatabase
@@ -20,11 +19,11 @@ services:
         volumes:
           - ../topics-explorer-backend:/backend
         environment:
-          - KEYSTORE_PASSWD=$${KEYSTORE_PASSWD}
+          - KEYSTOREPASSWD=$KEYSTOREPASSWD_HOST
     appdatabase:
         image: postgres
         environment:
-          - POSTGRES_PASSWORD=$${DB_PASSWORD}
+          - POSTGRES_PASSWORD=$DB_PASSWORD
           - POSTGRES_DB=topicsexplorer
         volumes:
           - ../database/postgresql-data:/var/lib/postgresql/data
