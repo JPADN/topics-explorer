@@ -16,6 +16,8 @@ services:
           - "8443:8443"
         environment:
           - KEYSTOREPASSWD=$KEYSTOREPASSWD_HOST
+          - DB_PASSWORD=$DB_PASSWORD
+          - EMAIL_PASSWD=$EMAIL_PASSWD
     appdatabase:
         image: postgres
         environment:
