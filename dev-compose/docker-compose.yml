@@ -18,6 +18,7 @@ services:
           - "8443:8443"
         volumes:
           - ../topics-explorer-backend:/backend          
+          - ../uploaded-images:/app_content/uploaded-images
         environment:
           - KEYSTOREPASSWD=$KEYSTOREPASSWD_HOST
           - DB_PASSWORD=$DB_PASSWORD

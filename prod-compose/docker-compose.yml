@@ -18,6 +18,8 @@ services:
           - KEYSTOREPASSWD=$KEYSTOREPASSWD_HOST
           - DB_PASSWORD=$DB_PASSWORD
           - EMAIL_PASSWD=$EMAIL_PASSWD
+        volumes:
+          - ../uploaded-images:/app_content/uploaded-images
     appdatabase:
         image: postgres
         environment:
@@ -25,3 +27,4 @@ services:
           - POSTGRES_DB=topicsexplorer
         volumes:
           - ../database/postgresql-data:/var/lib/postgresql/data
+          - ../database/dump:/database-dump
