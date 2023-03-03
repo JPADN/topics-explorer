@@ -33,4 +33,6 @@ Para compilar as imagens Docker e subir os contâineres em um SO Linux com bash,
 ./build_run_dev.sh
 ```
 
-Após a compilação das imagens e inicialização dos contâineres, acesse a aplicação em seu browser no endereço `http://localhost:3000`
+Após a compilação das imagens e inicialização dos contâineres, acesse a aplicação em seu navegador no endereço `http://localhost:3000`
+
+Neste ambiente de execução da aplicação, será utilizado um servidor de email de desenvolvimento. Este servidor de email é acessível pelo navegador no endereço `http://localhost:1080/`, onde será possível acessar os emails de confirmação de conta enviados no processo de cadastro de usuário.
