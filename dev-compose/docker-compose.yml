@@ -18,18 +18,17 @@ services:
           - "8443:8443"
         volumes:
           - ../topics-explorer-backend:/backend          
-          - ../uploaded-images:/app_content/uploaded-images
+          # - ../uploaded-images:/app_content/uploaded-images
         environment:
-          - KEYSTOREPASSWD=$KEYSTOREPASSWD_HOST
-          - DB_PASSWORD=$DB_PASSWORD
-          - EMAIL_PASSWD=$EMAIL_PASSWD
+          - DB_PASSWORD=$DB_PASSWORD        
     appdatabase:
         image: postgres
         environment:
           - POSTGRES_PASSWORD=$DB_PASSWORD
           - POSTGRES_DB=topicsexplorer
         volumes:
-          - ../database/postgresql-data:/var/lib/postgresql/data
+          - ../database/dump/topicsexplorerdump.sql:/docker-entrypoint-initdb.d/topicsexplorerdump.sql
+        #   - ../database/postgresql-data:/var/lib/postgresql/data      
     mailserver:
       image: maildev/maildev
       ports:
